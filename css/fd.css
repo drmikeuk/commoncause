@@ -1,0 +1,84 @@
+/* map - fullheight and width */
+html, body, .fullheight, #map       {height: 100%;}
+.container-fluid        {padding-left: 0px; padding-right: 0px}
+
+
+/* transparent top bar */
+.navbar-default                 { background-color: rgba(0,0,0, 0.8);}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav li a        {color: white;}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .nav li a:hover       {color: #f87672!important;}
+
+/* move controls down as new nav bar */
+.leaflet-top                    {top: 50px;}
+
+/* colours for controls - match FA icon colours */
+.red        {color: #D53E2A}
+
+.darkblue   {color: #0066A2}
+.blue       {color: #38A9DC}
+.lightblue  {color: #8ADAFF}
+.darkgreen  {color: #718224}
+.green      {color: #72AF26}
+.lightgreen {color: #BBF970}
+.purple     {color: #D152B8}
+.pink       {color: #FF91EA}
+.lightgray  {color: #A3A3A3}
+
+.gray       {color: #575757}
+.orange     {color: #F49630}
+
+/* popups */
+.leaflet-popup-content-wrapper  {border-radius: 4px;}
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);}
+
+.popup-content h2     {font-size: 18px; font-weight: 300;}
+.popup-content .city  {font-size: 14px; color: #888; /* text-transform: uppercase */}
+.popup-content p      {}
+
+/* swap all clusters to blue based on marker; internal div = less transparent) */
+.marker-cluster div   {color: white }
+/* was green */
+.marker-cluster-small {
+  background-color: rgba(41, 129, 202, 0.4)
+  }
+.marker-cluster-small div {
+  background-color: rgba(41, 129, 202, 0.8)
+  }
+
+/* was yellow */
+.marker-cluster-medium {
+  background-color: rgba(41, 129, 202, 0.4)
+  }
+.marker-cluster-medium div {
+  background-color: rgba(41, 129, 202, 0.8)
+  }
+
+/* was orange */
+.marker-cluster-large {
+  background-color: rgba(41, 129, 202, 0.4)
+  }
+.marker-cluster-large div {
+  background-color: rgba(41, 129, 202, 0.8)
+  }
+
+  
+
+
+/* wider gutters - extra right padding on 1st child; extra left padding on 2nd child 
+NEED to do this right for different sizes OR maybe build from LESS with custom wider @grid-gutter-width variable */
+@media (min-width:992px) { 
+
+/* Medium devices (desktops, 992px and up) */
+.widerGutter [class*="col-"]                  {padding-left: 30px; }
+.widerGutter [class*="col-"]:first-child      {padding-left: 15px; padding-right: 30px;}
+}
+
+@media (min-width:1200px) { 
+
+/* Large devices (large desktops, 1200px and up) */
+.widerGutter [class*="col-"]                  {padding-left: 45px; }
+.widerGutter [class*="col-"]:first-child      {padding-left: 15px; padding-right: 45px; }
+}

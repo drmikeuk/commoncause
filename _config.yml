@@ -1,0 +1,16 @@
+# Site settings
+title: Common Cause
+copyright_name: Common Cause
+description: ""
+baseurl: ""
+url: "http://commoncause.mikegardner.me.uk"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+#MJG dont really need these (once removed from all templates)
+gems: [jekyll-paginate, jekyll-feed]
